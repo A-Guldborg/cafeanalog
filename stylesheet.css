@@ -1,6 +1,6 @@
 body {
     background: #efca97;
-    padding-top: 30px;
+    padding-top: 15px;
 }
 
 #allcoffee {
@@ -10,12 +10,9 @@ body {
 }
 
 h1 {
-    position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
     font-size: 96px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .coffeeBox {
@@ -34,6 +31,7 @@ h1 {
 }
 
 #menubutton {
+    z-index: 10;
     position: fixed;
     width: 120px;
     height: 120px;
@@ -46,14 +44,37 @@ h1 {
     display: inline-block;
 }
 
-ul {
+#menubox {
     display: none;
-    position: absolute;
-    min-width: 160px;
+    position: fixed;
+    padding-top: 200px;
+    margin-left: 0px;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #37210e;
 }
 
-#menu:hover ul {
+ul {
+    padding: 0;
+}
+
+li {
+    font-size: 5em;
+    color: white;
+    border-top: 5px solid white;
+    padding: 25px 40px;
+    list-style-type: none;
+}
+
+#menu:hover #menubox {
     display: block;
+    overflow-y: scroll;
+}
+
+#menu:hover #menubutton path {
+    fill: white;
 }
 
 #coffee1 {
@@ -64,4 +85,31 @@ ul {
 #coffee2 {
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+@media (min-device-width: 750px) {
+    #coffee3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .coffeeBox {
+        width: 200px;
+        height: 200px;
+    }
+
+    li {
+        font-size: 2em;
+        padding: 15px 40px;
+    }
+
+    #menubox {
+        padding-top: 100px;
+        width: 20%;
+    }
+
+    #menubutton {
+        width: 80px;
+        height: 80px;
+    }
 }
