@@ -52,7 +52,7 @@ ul {
     min-width: 160px;
 }
 
-#menubutton:hover ul {
+#menu:hover ul {
     display: block;
 }
 
