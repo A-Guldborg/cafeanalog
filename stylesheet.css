@@ -1,21 +1,59 @@
 body {
-    background: sandybrown;
+    background: #efca97;
     padding-top: 30px;
 }
 
 #allcoffee {
     display: grid;
-    gap: 50px;
-    margin-top: 100px;
+    gap: 100px;
+    margin: 120px 100px 100px;
+}
+
+h1 {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 96px;
+    margin-top: 0px;
 }
 
 .coffeeBox {
     display: inline-grid;
     background: saddlebrown;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin: auto;
     border-radius: 25px;
+}
+
+.coffeesvg {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+#menubutton {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    left: 10px;
+    top: 10px;
+}
+
+#menu {
+    position: relative;
+    display: inline-block;
+}
+
+ul {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+}
+
+#menubutton:hover ul {
+    display: block;
 }
 
 #coffee1 {
