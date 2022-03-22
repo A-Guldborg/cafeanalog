@@ -1,0 +1,29 @@
+body {
+    background: sandybrown;
+    padding-top: 30px;
+}
+
+#allcoffee {
+    display: grid;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.coffeeBox {
+    display: inline-grid;
+    background: saddlebrown;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+#coffee1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#coffee2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
