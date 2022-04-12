@@ -10,23 +10,12 @@ h1 {
 }
 
 p {
-    text-align: center;
     color: white;
     font-size: 3em;
     margin: 5px 0;
 }
 
 @media (min-device-width: 600px) {
-    #coffee3 {
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-
-    .coffeeBox {
-        width: 200px;
-        height: 200px;
-    }
-
     p {
         font-size: 2em;
     }

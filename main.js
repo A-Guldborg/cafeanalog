@@ -1,3 +1,21 @@
+let bal = 100;
+
+function loadMenu() {
+    document.getElementById("menubox").innerHTML = "<ul>\n" +
+        "            <a href=\"shop.html\"><li>Shop</li></a>\n" +
+        "            <a href=\"receipts.html\"><li>Receipts</li></a>\n" +
+        "            <li onclick=\"addMoney()\">Add money</li>\n" +
+        "            <li>Scoreboard</li>\n" +
+        "            <li>Add friends</li>\n" +
+        "            <li>Logout</li>\n" +
+        "        </ul>\n" +
+        "        <p onload=\"loadBalance()\">\n" +
+        "            Balance: <span id=\"bal\"></span>\n" +
+        "        </p>";
+
+    loadBalance();
+}
+
 function loadReceipts() {
     const receiptList = document.getElementById("receiptList");
     const origReceipt = document.getElementById("originalReceipt");
@@ -28,4 +46,13 @@ function getReceipts() {
             name: "Macchiato"
         }
     ];
+}
+
+function loadBalance() {
+    document.getElementById("bal").innerText = bal + ",-";
+}
+
+function addMoney() {
+    bal += 50;
+    loadBalance();
 }
