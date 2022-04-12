@@ -16,3 +16,5 @@ export function getFirebaseConfig() {
         return config;
     }
 }
+<
+
