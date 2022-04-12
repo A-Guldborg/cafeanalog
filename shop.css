@@ -1,18 +1,7 @@
-body {
-    background: #efca97;
-    padding-top: 15px;
-}
-
 #allcoffee {
     display: grid;
     gap: 100px;
     margin: 120px 100px 100px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 96px;
-    margin-top: 0;
 }
 
 .coffeeBox {
@@ -22,13 +11,6 @@ h1 {
     height: 300px;
     margin: auto;
     border-radius: 25px;
-}
-
-p {
-    text-align: center;
-    color: white;
-    font-size: 3em;
-    margin: 5px 0;
 }
 
 .coffeesvg {
@@ -56,10 +38,6 @@ p {
     .coffeeBox {
         width: 200px;
         height: 200px;
-    }
-
-    p {
-        font-size: 2em;
     }
 }
 
