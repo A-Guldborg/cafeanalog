@@ -49,7 +49,7 @@ import { getFirebaseConfig } from './firebase-config.js';
 
 // Signs-in Friendly Chat.
 async function signIn() {
-    console.log("test");
+    console.log("--->test");
     var provider = new GoogleAuthProvider();
     await signInWithPopup(getAuth(), provider);
 }
@@ -345,7 +345,6 @@ imageButtonElement.addEventListener('click', function (e) {
 mediaCaptureElement.addEventListener('change', onMediaFileSelected);
 
 const firebaseAppConfig = getFirebaseConfig();
-// TODO 0: Initialize Firebase
 initializeApp(firebaseAppConfig);
 // TODO 12: Initialize Firebase Performance Monitoring
 

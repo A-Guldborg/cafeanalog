@@ -1,4 +1,4 @@
-const firebaseConfig = {
+const config = {
     apiKey: "AIzaSyAPXHIXq__9Fi_a4oFsCKdSKoQRD5j5FhE",
     authDomain: "cafeanalog-2e676.firebaseapp.com",
     projectId: "cafeanalog-2e676",
@@ -8,6 +8,7 @@ const firebaseConfig = {
     measurementId: "G-B4XBGEH2QL"
 };
 
+
 export function getFirebaseConfig() {
     if (!config || !config.apiKey) {
         throw new Error('No Firebase configuration object provided.' + '\n' +
@@ -16,5 +17,5 @@ export function getFirebaseConfig() {
         return config;
     }
 }
-<
+
 
