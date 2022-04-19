@@ -4,6 +4,11 @@
     margin: 120px 100px 100px;
 }
 
+#originalCoffee {
+    visibility: hidden;
+    position: fixed;
+}
+
 .coffeeBox {
     display: inline-grid;
     background: saddlebrown;
@@ -23,18 +28,18 @@
     margin: auto;
 }
 
-#coffee1 {
+#coffee0 {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-#coffee2 {
+#coffee1 {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
 @media (min-device-width: 600px) {
-    #coffee3 {
+    #coffee2 {
         grid-column-start: 3;
         grid-column-end: 4;
     }
@@ -46,7 +51,7 @@
 }
 
 @media (min-device-width: 1200px) {
-    #coffee4 {
+    #coffee3 {
         grid-column-start: 4;
         grid-column-end: 5;
     }
