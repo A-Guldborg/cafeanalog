@@ -9,11 +9,10 @@ body {
     padding: 10px;
     background-color: #37210e;
     color: white;
-    margin-bottom: 50px;
 }
 
-#user-container {
-    position: absolute;
+.material-icons {
+    font-size: 96px;
 }
 
 h1 {
@@ -22,14 +21,43 @@ h1 {
     margin-top: 0;
 }
 
+#header div {
+    font-size: 50px;
+}
+
 p {
     color: white;
     font-size: 3em;
     margin: 5px 0;
 }
 
+.svg {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 100%;
+}
+
 @media (min-device-width: 600px) {
     p {
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+
+    .material-icons {
+        font-size: 56px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 56px;
+        margin: 0;
+    }
+
+    #header div {
+        font-size: 25px;
+    }
+
+    #header {
+        margin-bottom: 20px;
     }
 }

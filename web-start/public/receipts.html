@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Receipts</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">-->
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+
     <link rel="stylesheet" href="styles/receipts.css">
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/default.js"></script>
+
 </head>
-<body onload="loadMenu();loadReceipts()">
-<h1>
-    Receipts
-</h1>
+<body onload="loadReceipts()">
+<header class="mdl-layout__header mdl-color-text--white" id="header"></header>
 <div id="originalReceipt" class="receipt">
     <p class="name"></p>
     <p class="price"></p>
@@ -47,5 +51,8 @@
     </svg>
     <div id="menubox" />
 </div>
+<script src="scripts/default.js"></script>
+<script src="../src/index.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

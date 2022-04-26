@@ -38,6 +38,18 @@
     grid-column-end: 3;
 }
 
+.ticket {
+    background: #87572D;
+    width: 47%;
+    margin: 15px auto;
+    border-radius: 15px;
+    padding: 1.5%;
+    border: 10px solid #5D3619;
+    position: absolute;
+    left: 25%;
+    top: 40%;
+}
+
 @media (min-device-width: 600px) {
     #coffee2 {
         grid-column-start: 3;
@@ -47,6 +59,10 @@
     .coffeeBox {
         width: 200px;
         height: 200px;
+    }
+
+    .ticket {
+        padding: 3.5% 1.5%;
     }
 }
 

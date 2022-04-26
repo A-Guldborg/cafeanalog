@@ -22,7 +22,7 @@ a {
     display: none;
     position: fixed;
     padding-top: 200px;
-    margin-left: 0;
+    margin: 0;
     top: 0;
     left: 0;
     width: 50%;
@@ -42,12 +42,14 @@ li {
     list-style-type: none;
 }
 
+
+
 #menu:hover #menubox {
     display: block;
     overflow-y: scroll;
 }
 
-#menu:hover #menubutton path {
+#menubutton path {
     fill: white;
 }
 

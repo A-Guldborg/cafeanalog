@@ -1,26 +1,35 @@
 let bal = 100;
 
+function loadHeader() {
+    document.getElementById("header").innerHTML =
+        "    <div class=\"mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid\">" +
+    "            <div class=\"mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop\">" +
+        "            <h1><i class=\"material-icons\">local_cafe</i> CafeAnalog</h1>" +
+        "        </div>" +
+        "        <div hidden id=\"user-pic\"></div>" +
+        "        <div hidden id=\"user-name\"></div>" +
+        "    </div>";
+}
+
 function loadMenu() {
-    document.getElementById("menubox").innerHTML = "<ul>\n" +
+    document.getElementById("menubox").innerHTML =
+        "        <ul>\n" +
         "            <a href=\"shop.html\"><li>Shop</li></a>\n" +
         "            <a href=\"receipts.html\"><li>Receipts</li></a>\n" +
         "            <li onclick=\"addMoney()\">Add money</li>\n" +
         "            <li>Scoreboard</li>\n" +
         "            <li>Add friends</li>\n" +
-        "        </ul>\n" +
-        "        <p onload=\"loadBalance()\">\n" +
-        "            Balance: <span id=\"bal\"></span>\n" +
-        "        </p>" +
-        "       <div id=\"user-container\">" +
-        "          <div hidden id=\"user-pic\"> </div>" +
-        "           <div hidden id=\"user-name\"></div>" +
-        "           <button hidden id=\"sign-out\" className=\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white\">" +
-        "              Sign-out" +
-        "           </button>" +
-        "           <button id=\"sign-in\" className=\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white\">" +
-        "               <i className=\"material-icons\">account_circle</i>Sign-in with Google" +
-        "          </button>" +
-        "       </div>";
+        "            <li hidden id=\"sign-out\">" +
+        "              Sign out" +
+        "            </li>" +
+        "            <li id=\"sign-in\">" +
+        "                Sign in" +
+        "            </li>" +
+        "         </ul>\n" +
+        "         <p onload=\"loadBalance()\">\n" +
+        "             Balance: <span id=\"bal\"></span>\n" +
+        "         </p>"
+    ;
 
     loadBalance();
 }
@@ -82,12 +91,20 @@ function getShopItems() {
     ];
 }
 
+function hideTickets() {
+    document.getElementById("purchaseSuccessful").hidden = true;
+    document.getElementById("purchaseDenied").hidden = true;
+    console.log("Hello");
+}
+
 function buyItem(name, price) {
     if (bal >= price) {
         deductMoney(price);
-        // Todo: Add to list of receipts (DB required)
+        document.getElementById("type").innerText = name;
+        document.getElementById("purchaseSuccessful").hidden = false;
         console.log("Purchased: " + name + " for " + price + ",-");
     } else {
+        document.getElementById("purchaseDenied").hidden = false;
         console.log("Not enough money");
     }
 }
@@ -138,4 +155,5 @@ function addMoney() {
     loadBalance();
 }
 
+loadHeader();
 loadMenu();
