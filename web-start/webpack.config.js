@@ -12,7 +12,7 @@ const appConfig = {
     ...rootConfig,
     entry: './src/index.js',
     output: {
-        filename: 'main.js',
+        filename: 'default.js',
         path: path.resolve(__dirname, 'public/scripts'),
     },
 };

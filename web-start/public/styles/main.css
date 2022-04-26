@@ -1,6 +1,19 @@
 body {
     background: #efca97;
-    padding-top: 15px;
+    margin: 0;
+}
+
+#header {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #37210e;
+    color: white;
+    margin-bottom: 50px;
+}
+
+#user-container {
+    position: absolute;
 }
 
 h1 {

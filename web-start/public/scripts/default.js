@@ -7,11 +7,20 @@ function loadMenu() {
         "            <li onclick=\"addMoney()\">Add money</li>\n" +
         "            <li>Scoreboard</li>\n" +
         "            <li>Add friends</li>\n" +
-        "            <li>Logout</li>\n" +
         "        </ul>\n" +
         "        <p onload=\"loadBalance()\">\n" +
         "            Balance: <span id=\"bal\"></span>\n" +
-        "        </p>";
+        "        </p>" +
+        "       <div id=\"user-container\">" +
+        "          <div hidden id=\"user-pic\"> </div>" +
+        "           <div hidden id=\"user-name\"></div>" +
+        "           <button hidden id=\"sign-out\" className=\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white\">" +
+        "              Sign-out" +
+        "           </button>" +
+        "           <button id=\"sign-in\" className=\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white\">" +
+        "               <i className=\"material-icons\">account_circle</i>Sign-in with Google" +
+        "          </button>" +
+        "       </div>";
 
     loadBalance();
 }
@@ -128,3 +137,5 @@ function addMoney() {
     bal += 50;
     loadBalance();
 }
+
+loadMenu();
