@@ -94,7 +94,6 @@ function getShopItems() {
 function hideTickets() {
     document.getElementById("purchaseSuccessful").hidden = true;
     document.getElementById("purchaseDenied").hidden = true;
-    console.log("Hello");
 }
 
 function buyItem(name, price) {
@@ -103,6 +102,8 @@ function buyItem(name, price) {
         document.getElementById("type").innerText = name;
         document.getElementById("purchaseSuccessful").hidden = false;
         console.log("Purchased: " + name + " for " + price + ",-");
+        const now = new Date();
+        console.log(now.getTime());
     } else {
         document.getElementById("purchaseDenied").hidden = false;
         console.log("Not enough money");
@@ -123,20 +124,32 @@ function loadReceipts() {
             clone.removeAttribute("id");
             clone.querySelector(".name").innerHTML = receipts[i].name;
             clone.querySelector(".price").innerHTML = receipts[i].price + ",-";
+            clone.querySelector(".time").innerHTML = dateToString(new Date(receipts[i].time));
             receiptList.appendChild(clone);
         }
     }
+}
+
+function dateToString(date) {
+    return (addZero(date.getHours()) +":"+ addZero(date.getMinutes()) + " " + date.getDate() + "/" + date.getMonth() + "-" + date.getFullYear());
+}
+
+function addZero(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
 }
 
 function getReceipts() {
     return [
         {
             price: 32,
-            name: "Latte"
+            name: "Latte",
+            time: 1651225296798
         },
         {
             price: 27,
-            name: "Macchiato"
+            name: "Macchiato",
+            time: 1640529196798
         }
     ];
 }
