@@ -14,7 +14,7 @@ function loadHeader() {
 function loadMenu() {
     document.getElementById("menubox").innerHTML =
         "        <ul>\n" +
-        "            <a href=\"shop.html\"><li>Shop</li></a>\n" +
+        "            <a href=\"index.html\"><li>Shop</li></a>\n" +
         "            <a href=\"receipts.html\"><li>Receipts</li></a>\n" +
         "            <li onclick=\"addMoney()\">Add money</li>\n" +
         "            <li>Scoreboard</li>\n" +
